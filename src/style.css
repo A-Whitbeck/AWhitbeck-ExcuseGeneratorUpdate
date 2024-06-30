@@ -1,1 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+p {
+  font-size: xx-large;
+  color: white;
+  align-items: center;
+}
+body {
+  background-color: black;
+}
