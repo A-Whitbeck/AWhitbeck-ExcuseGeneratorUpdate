@@ -6,6 +6,14 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
+  // Generate an excuse on page load
+  generateExcuse();
+  document.querySelector(".btn").addEventListener("click", function() {
+    generateExcuse();
+  });
+};
+
+function generateExcuse() {
   let who = [
     "A dog on steroids",
     "My ninety year old grandma",
@@ -50,18 +58,11 @@ window.onload = function() {
     "while I was cooking"
   ];
 
-  function generateExcuse() {
-    let randomWho = who[Math.floor(Math.random() * who.length)];
-    let randomAction = action[Math.floor(Math.random() * action.length)];
-    let randomWhat = what[Math.floor(Math.random() * what.length)];
-    let randomWhen = when[Math.floor(Math.random() * when.length)];
+  let randomWho = who[Math.floor(Math.random() * who.length)];
+  let randomAction = action[Math.floor(Math.random() * action.length)];
+  let randomWhat = what[Math.floor(Math.random() * what.length)];
+  let randomWhen = when[Math.floor(Math.random() * when.length)];
 
-    let excuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}.`;
-    document.getElementById("excuse").textContent = excuse;
-  }
-
-  // Generate an excuse on page load
-  generateExcuse();
-};
-
-console.log("Hello Rigo from the console!");
+  let excuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}.`;
+  document.getElementById("excuse").textContent = excuse;
+}

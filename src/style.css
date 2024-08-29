@@ -8,3 +8,7 @@ p {
 body {
   background-color: black;
 }
+
+.container {
+  margin-top: 250px;
+}
